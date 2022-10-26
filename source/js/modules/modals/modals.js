@@ -152,9 +152,10 @@ export class Modals {
     this._setSettings(modalName);
     modal.classList.add('is-active');
 
-    if (!this._openedModalElement) {
-      this._scrollLock.disableScrolling();
-    }
+    // Оключена функция выключения скролла
+    // if (!this._openedModalElement) {
+    //   this._scrollLock.disableScrolling();
+    // }
 
     if (this._openCallback) {
       this._openCallback();
