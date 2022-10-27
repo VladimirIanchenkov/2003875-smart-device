@@ -46,10 +46,11 @@
     width: 40px;
     height: 40px;
   }
-}
-
-.main-header__contacts-link:hover svg {
-  fill: $color-alice-blue;
+  @include hover-focus {
+    svg {
+      fill: $color-alice-blue;
+    }
+  }
 }
 
 .main-header__contacts-link span {

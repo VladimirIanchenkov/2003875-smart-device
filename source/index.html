@@ -137,13 +137,13 @@
           </section>
         </div>
       </main>
-      <footer>
-        <div class="container">
+      <footer class="main-footer">
+        <div class="main-footer__container container">
           <section class="main-footer__social">
             <h2 class="visually-hidden">Мы в соцсетях</h2>
-            <a class="main-logo">
-              <svg width="55" height="55" role="img" aria-label="Электронные компоненты Smart Device.">
-                <use class="main-logo__image" href="./img/sprite_auto.svg#main-logo"></use>
+            <a class="main-footer__logo main-logo">
+              <svg width="55" height="55" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
+                <use href="./img/sprite_auto.svg#main-logo"></use>
               </svg>
               <span class="main-logo__title">Smart Device</span>
               <span class="main-logo__text">умные технологии</span>
@@ -178,36 +178,48 @@
           <section class="main-footer__nav">
             <h2>Разделы сайта</h2>
             <ul class="main-footer__nav-list">
-              <li class="main-footer__nav-item">
-                <a href="#about">О Компании</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#products">Продукты</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#">Производство печатных плат</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#">Монтаж печатных плат</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#">Комплектующие</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#">Доставка</a>
-              </li>
-              <li class="main-footer__nav-item">
-                <a href="#">Контакты</a>
-              </li>
+              <div class="main-footer__address-wrapper">
+                <li class="main-footer__nav-item">
+                  <a href="#about">О Компании</a>
+                </li>
+                <li class="main-footer__nav-item">
+                  <a href="#products">Продукты</a>
+                </li>
+                <li class="main-footer__nav-item">
+                  <a href="#">Производство печатных плат</a>
+                </li>
+                <li class="main-footer__nav-item">
+                  <a href="#">Монтаж печатных плат</a>
+                </li>
+              </div>
+              <div class="main-footer__address-wrapper">
+                <li class="main-footer__nav-item">
+                  <a href="#">Комплектующие</a>
+                </li>
+                <li class="main-footer__nav-item">
+                  <a href="#">Доставка</a>
+                </li>
+                <li class="main-footer__nav-item">
+                  <a href="#">Контакты</a>
+                </li>
+              </div>
             </ul>
           </section>
-          <section class="main-footer__adress">
+          <section class="main-footer__address">
             <h2>Наш офис</h2>
             <address>
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
-              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+              <ul class="main-footer__address-list">
+                <li class="main-footer__address-item">
+                  <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li class="main-footer__address-item">
+                  <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+                </li>
+                <li class="main-footer__address-item">
+                  <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
             </address>
           </section>
         </footer>
@@ -225,7 +237,7 @@
             </svg>
           </button>
           <h2 class="visually-hidden">Форма обратной связи</h2>
-          <form class="contacts__form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
             <h3>Закажите звонок</h3>
             <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
             <fieldset>

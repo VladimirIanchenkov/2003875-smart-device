@@ -4,17 +4,18 @@
   grid-template-rows: 1fr 1fr;
   column-gap: 15px;
   cursor: default;
-  max-width: 240px;
+  max-width: 205px;
 
   @include vp-767 {
     width: 35px;
     height: 35px;
     display: inline-block;
   }
-}
-
-.main-logo:hover svg {
-  fill: $color-alice-blue;
+  @include hover-focus {
+    svg {
+      fill: $color-alice-blue;
+    }
+  }
 }
 
 .main-logo svg {
@@ -46,7 +47,6 @@
 
 .main-logo__title,
 .main-logo__text {
-
   @include vp-767 {
     display: none;
   }
