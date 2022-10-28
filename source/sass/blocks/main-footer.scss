@@ -229,9 +229,9 @@
 
   @include hover-focus {
     color: $color-deep-sky-blue;
-  }
-  @include active {
-    opacity: 0.6;
+    @include active {
+      opacity: 0.6;
+    }
   }
 
   @include vp-767 {

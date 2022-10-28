@@ -12,8 +12,10 @@
     <link rel="preload" href="./fonts/roboto-condensed-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body>
     <div class="wrapper">
+
       <header class="main-header">
         <div class="main-header__container container">
           <a class="main-header__logo main-logo">
@@ -40,17 +42,21 @@
           <button class="button" href="#" data-open-modal="feedback" type="button">Заказать звонок</button>
         </div>
       </header>
-      <main>
-        <div class="container">
-          <h1 class="visually-hidden">Главная страница</h1>
 
-          <section class="intro">
+      <main>
+        <h1 class="visually-hidden">Главная страница</h1>
+
+        <section class="intro">
+          <div class="container">
             <h2>Печатные платы</h2>
             <p>Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="button" href="#contact">Получить бесплатную консультацию</a>
-          </section>
+            <a class="intro__button button" href="#contact">Получить бесплатную консультацию</a>
+            <a class="intro__button intro__button--mobile button" href="#contact">Бесплатная консультация</a>
+          </div>
+        </section>
 
-          <section class="advantages">
+        <section class="advantages">
+          <div class="container">
             <h2 class="visually-hidden">Преимущества</h2>
             <div class="advantages__card">
               <svg width="35" height="35" fill="#00b2ff">
@@ -80,18 +86,22 @@
               <h3>Персонализация стоимости</h3>
               <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="about" id="about">
+        <section class="about" id="about">
+          <div class="container">
             <h2>О компании</h2>
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
             <p>Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
             <p>Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов.</p>
             <button class="button">Подробнее</button>
-          </section>
+          </div>
+        </section>
 
-          <section class="products" id="products">
+        <section class="products" id="products">
+          <div class="container">
             <h2 class="visually-hidden">Товары и услуги</h2>
             <p>Smart Device предлагает следующие товары и услуги</p>
             <ul class="products__list">
@@ -111,9 +121,11 @@
                 </a>
               </li>
             </ul>
-          </section>
+          </div>
+        </section>
 
-          <section class="contact" id="contact">
+        <section class="contact" id="contact">
+          <div class="container">
             <h2 class="visually-hidden">Форма обратной связи</h2>
             <form class="contact__form" action="https://echo.htmlacademy.ru" method="get">
               <h3>Остались вопросы? Задайте их нам!</h3>
@@ -134,11 +146,14 @@
                 <span class="control__label">Я согласен на обработку<br>персональных данных</span>
               </label>
             </form>
-          </section>
-        </div>
+          </div>
+        </section>
+
       </main>
+
       <footer class="main-footer">
         <div class="main-footer__container container">
+
           <section class="main-footer__social">
             <h2 class="visually-hidden">Мы в соцсетях</h2>
             <a class="main-footer__logo main-logo">
@@ -175,6 +190,7 @@
               </li>
             </ul>
           </section>
+
           <section class="main-footer__nav">
             <button class="main-footer__accordion main-footer__accordion--active main-footer__accordion--nojs" type="button">
               <h2>Разделы сайта</h2>
@@ -209,6 +225,7 @@
               </ul>
             </div>
           </section>
+
           <section class="main-footer__address">
             <button class="main-footer__accordion main-footer__accordion--active main-footer__accordion--nojs" type="button">
               <h2>Наш офис</h2>

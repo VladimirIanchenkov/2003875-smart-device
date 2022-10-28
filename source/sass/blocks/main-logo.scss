@@ -5,11 +5,13 @@
   column-gap: 15px;
   cursor: default;
   max-width: 205px;
+  margin-top: 0;
 
   @include vp-767 {
     width: 35px;
     height: 35px;
     display: inline-block;
+    margin-top: 4px;
   }
   @include hover-focus {
     svg {

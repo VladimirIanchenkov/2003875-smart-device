@@ -39,9 +39,8 @@
     svg {
       fill: $color-deep-sky-blue;
     }
-  }
-
-  @include active {
-    opacity: 0.8;
+    @include active {
+      opacity: 0.8;
+    }
   }
 }
