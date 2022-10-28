@@ -442,7 +442,7 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 21px;
   font-family: "PT Mono", "Lucida Console", monospace;
   color: #041827;
   word-break: break-word;
@@ -803,6 +803,7 @@ button,
 
 .main-header {
   position: fixed;
+  z-index: 2;
   top: 0;
   width: 100%;
   padding-top: 30px;
@@ -1127,6 +1128,72 @@ button,
   display: none;
 }
 
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.advantages__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 32px;
+  -moz-column-gap: 32px;
+  column-gap: 32px;
+  row-gap: 30px;
+}
+
+.advantages__card {
+  padding: 40px 45px 35px;
+  border: 1px solid #ebebeb;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 300px;
+}
+
+.advantages__card::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #00b2ff;
+}
+
+.advantages__card.focus-visible:focus {
+  background-color: #00b2ff;
+}
+
+.advantages__card.focus-visible:focus svg {
+  fill: #f2f5f7;
+}
+
+.advantages__card.focus-visible:focus h3,
+.advantages__card.focus-visible:focus p {
+  color: #f2f5f7;
+}
+
+.advantages__card svg {
+  margin-bottom: 16px;
+}
+
+.advantages__card h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  margin: 0;
+  margin-bottom: 13px;
+  color: #00b2ff;
+}
+
+.advantages__card p {
+  margin: 0;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1301,6 +1368,28 @@ button,
 
   .intro a {
     margin-left: 7%;
+  }
+
+  .advantages {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .advantages__container {
+    gap: 30px;
+  }
+
+  .advantages__card {
+    padding: 40px 30px 35px 45px;
+    min-height: 360px;
+  }
+
+  .advantages__card svg {
+    margin-bottom: 10px;
+  }
+
+  .advantages__card h3 {
+    line-height: 30px;
   }
 }
 
@@ -1548,6 +1637,46 @@ button,
   .intro__button--mobile {
     display: block;
   }
+
+  .advantages {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .advantages__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+
+  .advantages__card {
+    padding: 29px 30px 35px;
+    min-height: 340px;
+  }
+
+  .advantages__card svg {
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .advantages__card h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 12px;
+  }
+
+  .advantages__card p {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 @media (hover: hover) {
@@ -1590,6 +1719,19 @@ button,
   .social__link:hover:not(.focus-visible):active,
   .social__link:hover:not(.focus-visible).focus-visible:active {
     opacity: 0.8;
+  }
+
+  .advantages__card:hover:not(.focus-visible) {
+    background-color: #00b2ff;
+  }
+
+  .advantages__card:hover:not(.focus-visible) svg {
+    fill: #f2f5f7;
+  }
+
+  .advantages__card:hover:not(.focus-visible) h3,
+  .advantages__card:hover:not(.focus-visible) p {
+    color: #f2f5f7;
   }
 }
 
