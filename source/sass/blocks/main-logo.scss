@@ -1,7 +1,7 @@
 .main-logo {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   column-gap: 15px;
   cursor: default;
   max-width: 205px;
@@ -33,7 +33,7 @@
   font-weight: 700;
   line-height: 29px;
   color: $color-alice-blue;
-  align-self: center;
+  margin-top: 2px;
 }
 
 .main-logo__text {
@@ -42,7 +42,6 @@
   font-weight: 500;
   line-height: 14px;
   color: $color-white-transparent;
-  align-self: center;
 }
 
 .main-logo__title,
