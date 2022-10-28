@@ -1,6 +1,6 @@
 const accordions = document.querySelectorAll('.main-footer__accordion');
 
-const initJs = () => {
+const initAccordion = () => {
   Array.prototype.slice.call(accordions).forEach((el) => {
     el.classList.remove('main-footer__accordion--nojs');
     el.classList.remove('main-footer__accordion--active');
@@ -26,4 +26,4 @@ const toggleAccordion = () => {
   }
 };
 
-export {initJs, toggleAccordion};
+export {initAccordion, toggleAccordion};

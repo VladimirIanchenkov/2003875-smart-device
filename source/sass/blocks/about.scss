@@ -1,0 +1,134 @@
+.about {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @include vp-1023 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    padding-top: 18px;
+  }
+}
+
+.about__container {
+  position: relative;
+  min-height: 320px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 320px;
+    background-image: url("../img/2022-image.png");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 50px;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 380px;
+  }
+
+  @include vp-767 {
+    min-height: 305px;
+  }
+}
+
+.about h2,
+.about p,
+.about button {
+  margin-left: 20%;
+
+  @include vp-1023 {
+    margin-left: 26%;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.about h2 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about p {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.about button {
+  color: $color-deep-sky-blue;
+  border-color: $color-deep-sky-blue;
+  font-size: 14px;
+  line-height: 16px;
+  min-width: 180px;
+  padding-top: 18px;
+  margin-top: 18px;
+
+  @include vp-1023 {
+    margin-top: 20px;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+    padding-top: 8px;
+    margin-top: 12px;
+  }
+}
+
+.about__panel {
+  max-height: 170px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+  @include vp-1023 {
+    max-height: 250px;
+  }
+
+  @include vp-767 {
+    max-height: 210px;
+  }
+}
+
+.about__button--nojs {
+  display: none;
+}
+
+.about__button--nojs .about__panel {
+  max-height: 100%;
+}
+
