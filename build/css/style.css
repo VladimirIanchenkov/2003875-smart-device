@@ -1266,19 +1266,23 @@ button,
 }
 
 .products {
-  padding-top: 70px;
+  padding-top: 65px;
   padding-bottom: 140px;
   background-color: #041827;
 }
 
-.products p {
+.products__title {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+}
+
+.products__title--modified {
+  display: none;
 }
 
 .products__list {
@@ -1303,7 +1307,7 @@ button,
   position: relative;
   min-width: 28%;
   aspect-ratio: 0.538;
-  padding: 50px 40px 80px;
+  padding: 48px 40px 80px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1342,6 +1346,11 @@ button,
   opacity: 0.8;
 }
 
+.products__link:active,
+.products__link.focus-visible:active {
+  opacity: 0.6;
+}
+
 .products__image {
   position: absolute;
   top: 0;
@@ -1365,9 +1374,14 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  margin: 0;
   margin-bottom: 30px;
   color: #ffffff;
   z-index: 3;
+}
+
+.products__link--modified br:first-of-type {
+  display: none;
 }
 
 /* @mixin hover-focus {
@@ -1595,6 +1609,15 @@ button,
     max-height: 250px;
   }
 
+  .products {
+    padding-top: 55px;
+    padding-bottom: 77px;
+  }
+
+  .products__title {
+    margin-bottom: 36px;
+  }
+
   .products__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1621,6 +1644,14 @@ button,
   }
 
   .products__image--mobile {
+    display: none;
+  }
+
+  .products__link--modified br:first-of-type {
+    display: inline-block;
+  }
+
+  .products__link--modified br:last-of-type {
     display: none;
   }
 }
@@ -1911,7 +1942,7 @@ button,
   }
 
   .about {
-    padding-top: 18px;
+    padding-top: 14px;
   }
 
   .about__container::before {
@@ -1952,6 +1983,33 @@ button,
     max-height: 210px;
   }
 
+  .products {
+    padding-top: 48px;
+    padding-bottom: 86px;
+  }
+
+  .products__title {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 28px;
+    display: none;
+  }
+
+  .products__title--modified {
+    display: block;
+  }
+
+  .products__link {
+    aspect-ratio: 1.08;
+    padding: 28px 30px 60px;
+  }
+
+  .products__link::after {
+    width: 40px;
+    height: 40px;
+    background-size: 4px 8px;
+  }
+
   .products__image--desktop {
     display: none;
   }
@@ -1962,6 +2020,12 @@ button,
 
   .products__image--mobile {
     display: block;
+  }
+
+  .products__link p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
   }
 }
 

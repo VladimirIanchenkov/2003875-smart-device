@@ -1,17 +1,46 @@
 .products {
-  padding-top: 70px;
+  padding-top: 65px;
   padding-bottom: 140px;
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-top: 55px;
+    padding-bottom: 77px;
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 86px;
+  }
 }
 
-.products p {
+.products__title {
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+
+  @include vp-1023 {
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 28px;
+    display: none;
+  }
+}
+
+.products__title--modified {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
 }
 
 .products__list {
@@ -35,7 +64,7 @@
   position: relative;
   min-width: 28%;
   aspect-ratio: 0.538;
-  padding: 50px 40px 80px;
+  padding: 48px 40px 80px;
   box-sizing: border-box;
 
   &::before {
@@ -74,10 +103,25 @@
     }
   }
 
+  @include active {
+    opacity: 0.6;
+  }
+
   @include vp-1023 {
     width: 100%;
     aspect-ratio: 2.68;
     padding: 40px 45px 80px;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 1.08;
+    padding: 28px 30px 60px;
+
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 4px 8px;
+    }
   }
 }
 
@@ -129,7 +173,28 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
+  margin: 0;
   margin-bottom: 30px;
   color: $color-default-white;
   z-index: 3;
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.products__link--modified br:first-of-type {
+  display: none;
+
+  @include vp-1023 {
+    display: inline-block;
+  }
+}
+
+.products__link--modified br:last-of-type {
+  @include vp-1023 {
+    display: none;
+  }
 }
