@@ -177,22 +177,19 @@
               <fieldset>
                 <legend class="visually-hidden">Контактные данные</legend>
                 <label class="contact__form-field">
-                  <input type="text" id="name" name="Name" placeholder="Имя" required>
+                  <input type="text" id="name" name="tame" placeholder="Имя" required>
                 </label>
                 <label class="contact__form-field">
-                  <input type="tel" id="tel" name="Telephone-number" placeholder="Телефон" required>
+                  <input type="tel" id="tel" name="telephone-number" placeholder="Телефон" required>
                 </label>
                 <label class="contact__form-field contact__form-field--modified">
-                  <textarea id="question" name="Question" placeholder="Ваш вопрос" rows="5"></textarea>
+                  <textarea id="question" name="question" placeholder="Ваш вопрос" rows="5"></textarea>
                 </label>
               </fieldset>
               <div class="contact__form-container-inner">
                 <button class="button">Задать вопрос</button>
-                <label class="contact__form-control">
-                  <input class="visually-hidden" type="checkbox" name="Consent" checked>
-                  <span class="contact__form-mark"></span>
-                  <span class="contact__form-label">Я согласен на&nbsp;обработку персональных данных</span>
-                </label>
+                <input class="visually-hidden" type="checkbox" id="consent" name="Consent" checked>
+                <label class="contact__form-label" for="consent">Я согласен на&nbsp;обработку персональных данных</label>
               </div>
             </form>
           </div>

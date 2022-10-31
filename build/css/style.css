@@ -943,6 +943,10 @@ button,
   background: none;
 }
 
+.main-footer__accordion.focus-visible:focus {
+  outline: none;
+}
+
 .main-footer__accordion-panel {
   width: 100%;
 }
@@ -1359,6 +1363,7 @@ button,
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  background-color: #041827;
 }
 
 .products__image--tablet {
@@ -1530,25 +1535,19 @@ button,
   color: #041427;
 }
 
-.contact__form-control {
+.contact__form-label {
   position: relative;
-  display: block;
-  padding-left: 22px;
   cursor: pointer;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 0.8;
+  padding-left: 24px;
   width: 41%;
 }
 
-.contact__form-control.focus-visible:focus .contact__form-mark {
-  border-color: #041827;
-}
-
-.contact__form-control.focus-visible:focus .contact__form-label {
-  color: #041427;
-}
-
-.contact__form-mark {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.contact__form-label::before {
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -1561,7 +1560,13 @@ button,
   transform: translateY(-50%);
 }
 
-.contact__form-control input:checked + .contact__form-mark::before {
+.contact__form-container-inner input:focus + .contact__form-label::before,
+.contact__form-container-inner input:focus-visible + .contact__form-label::before {
+  outline: 2px solid #000000;
+  outline-offset: -3px;
+}
+
+.contact__form-container-inner input:checked + .contact__form-label::after {
   content: "";
   position: absolute;
   width: 9px;
@@ -1570,18 +1575,10 @@ button,
   background-size: 9px 6px;
   background-repeat: no-repeat;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.contact__form-label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ffffff;
-  opacity: 0.8;
+  left: 0;
+  -webkit-transform: translate(35%, -50%);
+  -ms-transform: translate(35%, -50%);
+  transform: translate(35%, -50%);
 }
 
 /* @mixin hover-focus {
@@ -1904,6 +1901,10 @@ button,
     width: 40%;
     padding-top: 17px;
     padding-bottom: 9px;
+  }
+
+  .contact__form-label {
+    padding-left: 26px;
   }
 }
 
@@ -2323,12 +2324,16 @@ button,
     width: 100%;
   }
 
-  .contact__form-control {
+  .contact__form-label {
     width: 100%;
     padding-left: 30px;
   }
 
-  .contact__form-mark {
+  .contact__form-label::before {
+    left: 5px;
+  }
+
+  .contact__form-container-inner input:checked + .contact__form-label::after {
     left: 5px;
   }
 }
@@ -2401,11 +2406,7 @@ button,
     color: #041427;
   }
 
-  .contact__form-control:hover:not(.focus-visible) .contact__form-mark {
-    border-color: #041827;
-  }
-
-  .contact__form-control:hover:not(.focus-visible) .contact__form-label {
+  .contact__form-label:hover:not(.focus-visible) {
     color: #041427;
   }
 }
