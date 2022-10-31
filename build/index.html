@@ -169,26 +169,31 @@
         </section>
 
         <section class="contact" id="contact">
-          <div class="container">
+          <div class="contact__container container">
             <h2 class="visually-hidden">Форма обратной связи</h2>
-            <form class="contact__form" action="https://echo.htmlacademy.ru" method="get">
+            <form class="contact__form" action="https://echo.htmlacademy.ru" method="post">
               <h3>Остались вопросы? Задайте их нам!</h3>
               <p>Мы проконсультируем Вас бесплатно</p>
               <fieldset>
                 <legend class="visually-hidden">Контактные данные</legend>
-                <label class="visually-hidden" for="name">Ваше имя:</label>
-                <input type="text" id="name" name="Name" placeholder="Имя">
-                <label class="visually-hidden" for="tel">Ваш телефон:</label>
-                <input type="tel" id="tel" name="Telephone-number" placeholder="Телефон">
-                <label class="visually-hidden" for="question">Ваш вопрос:</label>
-                <input type="textarea" id="question" name="Question" placeholder="Ваш вопрос">
+                <label class="contact__form-field">
+                  <input type="text" id="name" name="Name" placeholder="Имя" required>
+                </label>
+                <label class="contact__form-field">
+                  <input type="tel" id="tel" name="Telephone-number" placeholder="Телефон" required>
+                </label>
+                <label class="contact__form-field contact__form-field--modified">
+                  <textarea id="question" name="Question" placeholder="Ваш вопрос" rows="5"></textarea>
+                </label>
               </fieldset>
-              <button class="button">Задать вопрос</button>
-              <label class="control">
-                <input class="control__input visually-hidden" type="checkbox" name="Consent" checked>
-                <span class="control__mark"></span>
-                <span class="control__label">Я согласен на обработку<br>персональных данных</span>
-              </label>
+              <div class="contact__form-container-inner">
+                <button class="button">Задать вопрос</button>
+                <label class="contact__form-control">
+                  <input class="visually-hidden" type="checkbox" name="Consent" checked>
+                  <span class="contact__form-mark"></span>
+                  <span class="contact__form-label">Я согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
             </form>
           </div>
         </section>
@@ -306,7 +311,7 @@
             </svg>
           </button>
           <h2 class="visually-hidden">Форма обратной связи</h2>
-          <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
             <h3>Закажите звонок</h3>
             <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
             <fieldset>

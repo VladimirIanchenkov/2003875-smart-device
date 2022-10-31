@@ -1,0 +1,268 @@
+.contact {
+  padding-top: 165px;
+  padding-bottom: 250px;
+  background-color: $color-deep-sky-blue;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #04182780;
+    width: 100vw;
+    height: 100vw;
+    top: -56vw;
+    left: -69vw;
+    transform: rotate(-40.6deg);
+  }
+
+  @include vp-1023 {
+    padding-top: 46px;
+    padding-bottom: 125px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 85px;
+  }
+}
+
+.contact__container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 39%;
+    aspect-ratio: 1.789;
+    top: 18%;
+    left: 50px;
+    background-image: url("../img/paper-airplane-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/paper-airplane-image@2x.png");
+    }
+  }
+
+  @include vp-1023 {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.contact__form {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 48%;
+
+  @include vp-1023 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.contact__form h3 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 8px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.contact__form p {
+  color: $color-default-white;
+  margin-top: 0;
+  margin-bottom: 35px;
+  margin-left: 5px;
+
+  @include vp-1023 {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 34px;
+  }
+}
+
+.contact__form fieldset {
+  border: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5%;
+  row-gap: 20px;
+  margin-bottom: 32px;
+
+  @include vp-1023 {
+    margin-bottom: 28px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.contact__form-field input,
+.contact__form-field textarea {
+  background: #04142726;
+  border: none;
+  border-radius: 3px;
+  color: $color-default-white;
+  padding: 15px;
+  margin-left: 5px;
+  width: 100%;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
+.contact__form-field--modified {
+  grid-column: 1 / -1;
+}
+
+.contact__form-field textarea {
+  padding: 25px 15px 38px;
+
+  @include vp-1023 {
+    padding: 32px 15px 33px;
+  }
+
+  @include vp-767 {
+    padding: 25px 15px 65px;
+  }
+}
+
+.contact__form-field input::placeholder,
+.contact__form-field textarea::placeholder {
+  color: $color-default-white;
+}
+
+.contact__form-container-inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 9%;
+  flex-wrap: wrap;
+  margin-left: 5px;
+
+  @include vp-1023 {
+    margin-left: 0;
+    gap: 12%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.contact__form button {
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #041427;
+  color: $color-default-white;
+  border: none;
+  padding: 13px 25px;
+  width: 46%;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: #041427;
+  }
+
+  @include vp-1023 {
+    width: 40%;
+    padding-top: 17px;
+    padding-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.contact__form-control {
+  position: relative;
+  display: block;
+  padding-left: 22px;
+  cursor: pointer;
+  width: 41%;
+
+  @include hover-focus {
+    .contact__form-mark {
+      border-color: $color-black-pearl;
+    }
+
+    .contact__form-label {
+      color: #041427;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-left: 30px;
+  }
+}
+
+.contact__form-mark {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  transform: translateY(-50%);
+
+  @include vp-767 {
+    left: 5px;
+  }
+}
+
+.contact__form-control input:checked + .contact__form-mark {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 6px;
+    background-image: url("../img/svg/check-mark.svg");
+    background-size: 9px 6px;
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.contact__form-label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+}

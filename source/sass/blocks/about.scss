@@ -28,6 +28,7 @@
 
     @include retina {
       background-image: url("../../img/2022-image@2x.png");
+      background-size: cover;
     }
 
     @include vp-767 {
