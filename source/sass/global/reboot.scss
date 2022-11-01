@@ -39,6 +39,7 @@ a {
   color: $color-black-pearl;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
 }
 
 img,
@@ -129,4 +130,5 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+  user-select: none;
 }

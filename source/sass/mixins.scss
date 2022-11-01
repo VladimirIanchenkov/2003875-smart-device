@@ -37,6 +37,12 @@
   }
 }
 
+@mixin disabled {
+  &:disabled {
+    @content;
+  }
+}
+
 // Desktop first
 
 @mixin vp-1919 {

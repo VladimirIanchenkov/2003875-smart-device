@@ -177,7 +177,7 @@
               <fieldset>
                 <legend class="visually-hidden">Контактные данные</legend>
                 <label class="contact__form-field">
-                  <input type="text" id="name" name="tame" placeholder="Имя" required>
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
                 </label>
                 <label class="contact__form-field">
                   <input type="tel" id="tel" name="telephone-number" placeholder="Телефон" required>
@@ -188,7 +188,7 @@
               </fieldset>
               <div class="contact__form-container-inner">
                 <button class="button">Задать вопрос</button>
-                <input class="visually-hidden" type="checkbox" id="consent" name="Consent" checked>
+                <input class="visually-hidden" type="checkbox" id="consent" name="сonsent" checked required>
                 <label class="contact__form-label" for="consent">Я согласен на&nbsp;обработку персональных данных</label>
               </div>
             </form>
@@ -302,30 +302,33 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап." data-close-modal>
+            <svg width="15" height="15" fill="#ffffff">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
           </button>
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
             <h3>Закажите звонок</h3>
-            <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+            <p>Оставьте контакты, мы проконсультируем<br>
+              вас бесплатно в&nbsp;удобное время</p>
             <fieldset>
               <legend class="visually-hidden">Контактные данные</legend>
-              <label class="visually-hidden" for="name">Ваше имя:</label>
-              <input type="text" id="name" name="Name" placeholder="Имя">
-              <label class="visually-hidden" for="tel">Ваш телефон:</label>
-              <input type="tel" id="tel" name="Telephone-number" placeholder="Телефон">
-              <label class="visually-hidden" for="question">Ваш вопрос:</label>
-              <input type="textarea" id="question" name="Question" placeholder="Ваш вопрос">
+              <label class="modal__form-field" for="modal-name">
+                <input type="text" id="modal-name" name="name" placeholder="Имя" required>
+              </label>
+              <label class="modal__form-field" for="modal-tel">
+                <input type="tel" id="modal-tel" name="telephone-number" placeholder="Телефон" required>
+              </label>
+              <label class="modal__form-field modal__form-field--modified" for="modal-question">
+                <textarea id="question" name="question" placeholder="Ваш вопрос" rows="6"></textarea>
+              </label>
             </fieldset>
-            <button class="button">Задать вопрос</button>
-            <label class="control">
-              <input class="control__input visually-hidden" type="checkbox" name="Consent" checked>
-              <span class="control__mark"></span>
-              <span class="control__label">Я согласен на обработку<br>персональных данных</span>
-            </label>
+            <div class="modal__form-container-inner">
+              <button class="button">Отправить</button>
+              <input class="visually-hidden" type="checkbox" id="modal-consent" name="сonsent" checked required>
+              <label class="modal__form-label" for="modal-consent">Я согласен на&nbsp;обработку персональных данных</label>
+            </div>
           </form>
         </div>
       </div>
