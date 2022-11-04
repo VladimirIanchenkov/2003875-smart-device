@@ -143,6 +143,20 @@
   @include hover-focus {
     outline: 1px solid $color-alice-blue-light;
     outline-offset: 2px;
+
+    @include disabled {
+      outline: none;
+    }
+  }
+
+  @include disabled {
+    pointer-events: none;
+    border-color: #bfbfbf;
+    background-color: #bfbfbf;
+
+    &::placeholder {
+      color: #606060;
+    }
   }
 }
 

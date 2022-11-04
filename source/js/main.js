@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import './modules/accordion.js';
 import {initAccordion, toggleAccordion} from './modules/accordion.js';
 import {initCurtain, toggleCurtain} from './modules/curtain.js';
+import {checkFirstNumber} from './modules/validator.js';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleAccordion();
   initCurtain();
   toggleCurtain();
+  checkFirstNumber();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -60,7 +60,7 @@ export class FocusLock {
     }
     this._focusableElements = lockedElement.querySelectorAll(this._selectors);
     this._endElement = document.activeElement;
-    const startElement = lockedElement.querySelector('[data-focus]') || this._focusableElements[0];
+    const startElement = lockedElement.querySelector('[data-focus]') || this._focusableElements[1];
     if (this._endElement) {
       this._endElement.blur();
     }

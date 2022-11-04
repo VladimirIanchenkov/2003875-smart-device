@@ -32,4 +32,10 @@
       opacity: 0.3;
     }
   }
+
+  @include disabled {
+    color: #606060;
+    border-color: #f2f2f2;
+    background-color: #f2f2f2;
+  }
 }

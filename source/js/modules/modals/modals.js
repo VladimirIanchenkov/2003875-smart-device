@@ -1,6 +1,7 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
 
+// const nameInput = document.getElementById('modal-name');
 export class Modals {
   constructor(settings = {}) {
     this._scrollLock = new ScrollLock();
@@ -152,10 +153,9 @@ export class Modals {
     this._setSettings(modalName);
     modal.classList.add('is-active');
 
-    // Оключена функция выключения скролла
-    // if (!this._openedModalElement) {
-    //   this._scrollLock.disableScrolling();
-    // }
+    if (!this._openedModalElement) {
+      this._scrollLock.disableScrolling();
+    }
 
     if (this._openCallback) {
       this._openCallback();
@@ -168,6 +168,7 @@ export class Modals {
     setTimeout(() => {
       this._addListeners(modal);
       this._autoPlay(modal);
+      this._focusLock.lock('.modal.is-active', this._startFocus);
       document.addEventListener('click', this._documentClickHandler);
     }, this._eventTimeout);
   }

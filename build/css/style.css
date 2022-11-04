@@ -697,6 +697,12 @@ button,
   opacity: 0.3;
 }
 
+.button:disabled {
+  color: #606060;
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -731,6 +737,26 @@ button,
 
 .modal::-webkit-scrollbar {
   display: none;
+}
+
+.modal--responsive .modal__content {
+  width: 100%;
+}
+
+.modal--fit-content .modal__content {
+  width: auto;
+}
+
+.modal--no-scale {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.modal--preload {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
 .modal__wrapper {
@@ -782,26 +808,6 @@ button,
   fill: #041827;
 }
 
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.modal--preload {
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-
 .modal.is-active {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -841,7 +847,7 @@ button,
   margin-bottom: 15px;
 }
 
-.modal__form input,
+.modal__form input:not(.visually-hidden),
 .modal__form textarea {
   background-color: rgba(4, 20, 39, 0.1490196078);
   border: none;
@@ -851,10 +857,47 @@ button,
   width: 100%;
 }
 
-.modal__form input.focus-visible:focus,
+.modal__form input:not(.visually-hidden).focus-visible:focus,
 .modal__form textarea.focus-visible:focus {
   outline: 1px solid #f8fdff;
   outline-offset: 2px;
+}
+
+.modal__form input:not(.visually-hidden).focus-visible:focus:disabled,
+.modal__form textarea.focus-visible:focus:disabled {
+  outline: none;
+}
+
+.modal__form input:not(.visually-hidden):disabled,
+.modal__form textarea:disabled {
+  pointer-events: none;
+  border-color: #bfbfbf;
+  background-color: #bfbfbf;
+}
+
+.modal__form input:not(.visually-hidden):disabled::-webkit-input-placeholder,
+.modal__form textarea:disabled::-webkit-input-placeholder {
+  color: #606060;
+}
+
+.modal__form input:not(.visually-hidden):disabled::-moz-placeholder,
+.modal__form textarea:disabled::-moz-placeholder {
+  color: #606060;
+}
+
+.modal__form input:not(.visually-hidden):disabled:-ms-input-placeholder,
+.modal__form textarea:disabled:-ms-input-placeholder {
+  color: #606060;
+}
+
+.modal__form input:not(.visually-hidden):disabled::-ms-input-placeholder,
+.modal__form textarea:disabled::-ms-input-placeholder {
+  color: #606060;
+}
+
+.modal__form input:not(.visually-hidden):disabled::placeholder,
+.modal__form textarea:disabled::placeholder {
+  color: #606060;
 }
 
 .modal__form-field textarea {
@@ -898,6 +941,7 @@ button,
 }
 
 .modal__form-label {
+  display: inline-block;
   position: relative;
   cursor: pointer;
   font-size: 14px;
@@ -905,7 +949,6 @@ button,
   color: #ffffff;
   opacity: 0.8;
   padding-left: 30px;
-  width: 41%;
   margin-left: 5px;
 }
 
@@ -921,6 +964,15 @@ button,
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.modal__form-container-inner {
+  position: relative;
+}
+
+.modal__form-container-inner input {
+  left: 19px;
+  bottom: 15%;
 }
 
 .modal__form-container-inner input:focus + .modal__form-label::before,
@@ -948,7 +1000,7 @@ button,
   position: fixed;
   z-index: 10;
   top: 0;
-  width: 100%;
+  width: 100vw;
   padding-top: 30px;
   padding-bottom: 35px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
@@ -1623,6 +1675,43 @@ button,
   outline-offset: 2px;
 }
 
+.contact__form-field input.focus-visible:focus:disabled,
+.contact__form-field textarea.focus-visible:focus:disabled {
+  outline: none;
+}
+
+.contact__form-field input:disabled,
+.contact__form-field textarea:disabled {
+  pointer-events: none;
+  border-color: #bfbfbf;
+  background-color: #bfbfbf;
+}
+
+.contact__form-field input:disabled::-webkit-input-placeholder,
+.contact__form-field textarea:disabled::-webkit-input-placeholder {
+  color: #606060;
+}
+
+.contact__form-field input:disabled::-moz-placeholder,
+.contact__form-field textarea:disabled::-moz-placeholder {
+  color: #606060;
+}
+
+.contact__form-field input:disabled:-ms-input-placeholder,
+.contact__form-field textarea:disabled:-ms-input-placeholder {
+  color: #606060;
+}
+
+.contact__form-field input:disabled::-ms-input-placeholder,
+.contact__form-field textarea:disabled::-ms-input-placeholder {
+  color: #606060;
+}
+
+.contact__form-field input:disabled::placeholder,
+.contact__form-field textarea:disabled::placeholder {
+  color: #606060;
+}
+
 .contact__form-field--modified {
   grid-column: 1/-1;
 }
@@ -2063,17 +2152,17 @@ button,
     padding: 0 25px;
   }
 
+  .modal--fit-content .modal__content {
+    width: 100%;
+  }
+
   .modal__wrapper {
     padding: 60px 16px;
   }
 
   .modal__content {
     width: 100%;
-    padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
+    padding: 40px 20px 20px;
   }
 
   .main-header {
@@ -2504,10 +2593,15 @@ button,
     outline-offset: 2px;
   }
 
-  .modal__form input:hover:not(.focus-visible),
+  .modal__form input:not(.visually-hidden):hover:not(.focus-visible),
   .modal__form textarea:hover:not(.focus-visible) {
     outline: 1px solid #f8fdff;
     outline-offset: 2px;
+  }
+
+  .modal__form input:not(.visually-hidden):hover:not(.focus-visible):disabled,
+  .modal__form textarea:hover:not(.focus-visible):disabled {
+    outline: none;
   }
 
   .modal__form-label:hover:not(.focus-visible) {
@@ -2571,6 +2665,11 @@ button,
   .contact__form-field textarea:hover:not(.focus-visible) {
     outline: 1px solid #f8fdff;
     outline-offset: 2px;
+  }
+
+  .contact__form-field input:hover:not(.focus-visible):disabled,
+  .contact__form-field textarea:hover:not(.focus-visible):disabled {
+    outline: none;
   }
 
   .contact__form-label:hover:not(.focus-visible) {
