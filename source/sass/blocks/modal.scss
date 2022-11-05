@@ -116,7 +116,7 @@
   @include active {
     svg {
       fill: $color-black-pearl;
-    };
+    }
   }
 }
 
@@ -165,6 +165,7 @@
   @include hover-focus {
     outline: 1px solid $color-alice-blue-light;
     outline-offset: 2px;
+    cursor: pointer;
 
     @include disabled {
       outline: none;

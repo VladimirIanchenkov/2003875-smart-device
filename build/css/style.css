@@ -861,6 +861,7 @@ button,
 .modal__form textarea.focus-visible:focus {
   outline: 1px solid #f8fdff;
   outline-offset: 2px;
+  cursor: pointer;
 }
 
 .modal__form input:not(.visually-hidden).focus-visible:focus:disabled,
@@ -1146,8 +1147,8 @@ button,
   width: 100%;
 }
 
-.main-footer__nav h2,
-.main-footer__address h2 {
+.main-footer__nav span,
+.main-footer__address span {
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1158,7 +1159,12 @@ button,
   color: #ffffff;
 }
 
-.main-footer__nav-wrapper {
+.main-footer__nav-list-item > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer__nav-list-item {
   width: 48%;
 }
 
@@ -1505,7 +1511,7 @@ button,
   flex-direction: column;
   position: relative;
   min-width: 28%;
-  aspect-ratio: 0.538;
+  aspect-ratio: 0.54;
   padding: 48px 40px 80px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1531,7 +1537,7 @@ button,
   background-image: url("../img/svg/arrow.svg");
   background-repeat: no-repeat;
   background-position: 55% 50%;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0 0;
   right: 0;
   bottom: 0;
   z-index: 3;
@@ -1613,7 +1619,7 @@ button,
   content: "";
   position: absolute;
   width: 39%;
-  aspect-ratio: 1.789;
+  aspect-ratio: 1.79;
   top: 18%;
   left: 50px;
   background-image: url("../img/paper-airplane-image.png");
@@ -1673,6 +1679,7 @@ button,
 .contact__form-field textarea.focus-visible:focus {
   outline: 1px solid #f8fdff;
   outline-offset: 2px;
+  cursor: pointer;
 }
 
 .contact__form-field input.focus-visible:focus:disabled,
@@ -1942,11 +1949,11 @@ button,
     width: auto;
   }
 
-  .main-footer__nav-wrapper {
+  .main-footer__nav-list-item {
     width: auto;
   }
 
-  .main-footer__nav-wrapper:not(:last-of-type) {
+  .main-footer__nav-list-item:not(:last-of-type) {
     margin-bottom: 7px;
   }
 
@@ -2287,6 +2294,15 @@ button,
     top: 0;
   }
 
+  .main-footer__accordion.focus-visible:focus span {
+    color: #00b2ff;
+  }
+
+  .main-footer__accordion.focus-visible:focus:active,
+  .main-footer__accordion.focus-visible:focus.focus-visible:active {
+    opacity: 0.8;
+  }
+
   .main-footer__accordion--active::after {
     background-image: url("../img/svg/minus.svg");
   }
@@ -2311,7 +2327,7 @@ button,
     max-height: 100%;
   }
 
-  .main-footer__nav-wrapper:not(:last-of-type) {
+  .main-footer__nav-list-item:not(:last-of-type) {
     margin-bottom: 15px;
   }
 
@@ -2577,6 +2593,17 @@ button,
   }
 }
 
+@media (max-width: 767px) and (hover: hover) {
+  .main-footer__accordion:hover:not(.focus-visible) span {
+    color: #00b2ff;
+  }
+
+  .main-footer__accordion:hover:not(.focus-visible):active,
+  .main-footer__accordion:hover:not(.focus-visible).focus-visible:active {
+    opacity: 0.8;
+  }
+}
+
 @media (hover: hover) {
   .button:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -2597,6 +2624,7 @@ button,
   .modal__form textarea:hover:not(.focus-visible) {
     outline: 1px solid #f8fdff;
     outline-offset: 2px;
+    cursor: pointer;
   }
 
   .modal__form input:not(.visually-hidden):hover:not(.focus-visible):disabled,
@@ -2665,6 +2693,7 @@ button,
   .contact__form-field textarea:hover:not(.focus-visible) {
     outline: 1px solid #f8fdff;
     outline-offset: 2px;
+    cursor: pointer;
   }
 
   .contact__form-field input:hover:not(.focus-visible):disabled,

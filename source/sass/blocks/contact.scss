@@ -38,7 +38,7 @@
     content: "";
     position: absolute;
     width: 39%;
-    aspect-ratio: 1.789;
+    aspect-ratio: 1.79;
     top: 18%;
     left: 50px;
     background-image: url("../img/paper-airplane-image.png");
@@ -143,6 +143,7 @@
   @include hover-focus {
     outline: 1px solid $color-alice-blue-light;
     outline-offset: 2px;
+    cursor: pointer;
 
     @include disabled {
       outline: none;

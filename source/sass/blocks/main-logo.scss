@@ -13,6 +13,7 @@
     display: inline-block;
     margin-top: 4px;
   }
+
   @include hover-focus {
     svg {
       fill: $color-alice-blue;

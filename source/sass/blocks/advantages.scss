@@ -60,6 +60,7 @@
       color: $color-alice-blue;
     }
   }
+
   @include vp-1023 {
     padding: 40px 30px 35px 45px;
     min-height: 360px;
