@@ -2,7 +2,7 @@
   min-height: 880px;
   width: 100%;
   background-color: #113b52;
-  background-image: url("../img/main-background-image.jpg");
+  background-image: url("../img/main-background-image-desktop.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,21 +10,31 @@
   padding-bottom: 80px;
 
   @include retina {
-    background-image: url("../img/main-background-image@2x.jpg");
+    background-image: url("../img/main-background-image-desktop@2x.jpg");
   }
 
   @include vp-1023 {
     margin-top: -100px;
     padding-top: 180px;
     min-height: 640px;
+    background-image: url("../img/main-background-image-tablet.jpg");
     background-position: 20% 0;
+
+    @include retina {
+      background-image: url("../img/main-background-image-tablet@2x.jpg");
+    }
   }
 
   @include vp-767 {
     margin-top: -70px;
     padding-top: 150px;
     min-height: 560px;
+    background-image: url("../img/main-background-image-mobile.jpg");
     background-position: 25% 0;
+
+    @include retina {
+      background-image: url("../img/main-background-image-mobile@2x.jpg");
+    }
   }
 }
 

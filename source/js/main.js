@@ -4,6 +4,7 @@ import './modules/accordion.js';
 import {initAccordion, toggleAccordion} from './modules/accordion.js';
 import {initCurtain, toggleCurtain} from './modules/curtain.js';
 import {checkFirstNumber} from './modules/validator.js';
+import {initScroll} from './modules/softScroll.js';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  initScroll();
   initAccordion();
   toggleAccordion();
   initCurtain();

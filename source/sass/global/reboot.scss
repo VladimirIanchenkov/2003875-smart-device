@@ -19,6 +19,7 @@ html {
   font-family: $ff-pt-mono;
   color: $color-black-pearl;
   word-break: break-word;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

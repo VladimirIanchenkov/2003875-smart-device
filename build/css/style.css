@@ -446,6 +446,7 @@ html {
   font-family: "PT Mono", "Lucida Console", monospace;
   color: #041827;
   word-break: break-word;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1283,7 +1284,7 @@ button,
   min-height: 880px;
   width: 100%;
   background-color: #113b52;
-  background-image: url("../img/main-background-image.jpg");
+  background-image: url("../img/main-background-image-desktop.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1978,6 +1979,7 @@ button,
     margin-top: -100px;
     padding-top: 180px;
     min-height: 640px;
+    background-image: url("../img/main-background-image-tablet.jpg");
     background-position: 20% 0;
   }
 
@@ -2151,6 +2153,12 @@ button,
 
   .contact__form-label {
     padding-left: 26px;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/main-background-image-tablet@2x.jpg");
   }
 }
 
@@ -2376,6 +2384,7 @@ button,
     margin-top: -70px;
     padding-top: 150px;
     min-height: 560px;
+    background-image: url("../img/main-background-image-mobile.jpg");
     background-position: 25% 0;
   }
 
@@ -2604,6 +2613,12 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/main-background-image-mobile@2x.jpg");
+  }
+}
+
 @media (hover: hover) {
   .button:hover:not(.focus-visible) {
     opacity: 0.8;
@@ -2708,7 +2723,7 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .intro {
-    background-image: url("../img/main-background-image@2x.jpg");
+    background-image: url("../img/main-background-image-desktop@2x.jpg");
   }
 
   .about__container::before {
