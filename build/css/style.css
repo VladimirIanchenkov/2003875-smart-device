@@ -663,6 +663,7 @@ button,
 
 .button {
   display: inline-block;
+  vertical-align: auto;
   padding: 10px 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -944,6 +945,7 @@ button,
 
 .modal__form-label {
   display: inline-block;
+  vertical-align: auto;
   position: relative;
   cursor: pointer;
   font-size: 14px;
@@ -2094,6 +2096,7 @@ button,
 
   .products__link--modified br:first-of-type {
     display: inline-block;
+    vertical-align: auto;
   }
 
   .products__link--modified br:last-of-type {
@@ -2154,6 +2157,10 @@ button,
   .contact__form-label {
     padding-left: 26px;
   }
+
+  .contact__form-container-inner input {
+    right: 47%;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
@@ -2200,6 +2207,7 @@ button,
     width: 35px;
     height: 35px;
     display: inline-block;
+    vertical-align: auto;
     margin-top: 4px;
   }
 
@@ -2595,6 +2603,11 @@ button,
 
   .contact__form-label::before {
     left: 5px;
+  }
+
+  .contact__form-container-inner input {
+    top: 95%;
+    right: 98%;
   }
 
   .contact__form-container-inner input:checked + .contact__form-label::after {
