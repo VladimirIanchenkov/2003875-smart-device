@@ -14,7 +14,7 @@
   }
 }
 
-.products__title {
+.products p {
   font-family: $ff-roboto-condensed;
   font-weight: 400;
   font-size: 36px;
@@ -35,7 +35,7 @@
   }
 }
 
-.products__title--modified {
+.products p + p {
   display: none;
 
   @include vp-767 {
@@ -190,8 +190,7 @@
   display: none;
 
   @include vp-1023 {
-    display: inline-block;
-    vertical-align: auto;
+    display: block;
   }
 }
 

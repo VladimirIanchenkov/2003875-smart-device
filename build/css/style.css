@@ -663,7 +663,7 @@ button,
 
 .button {
   display: inline-block;
-  vertical-align: auto;
+  vertical-align: middle;
   padding: 10px 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -945,7 +945,7 @@ button,
 
 .modal__form-label {
   display: inline-block;
-  vertical-align: auto;
+  vertical-align: middle;
   position: relative;
   cursor: pointer;
   font-size: 14px;
@@ -1056,6 +1056,7 @@ button,
 
 .main-header__contacts-link span {
   display: inline-block;
+  vertical-align: middle;
   line-height: 18px;
   color: #f2f5f7;
 }
@@ -1479,7 +1480,7 @@ button,
   background-color: #041827;
 }
 
-.products__title {
+.products p {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1489,7 +1490,7 @@ button,
   margin-bottom: 54px;
 }
 
-.products__title--modified {
+.products p + p {
   display: none;
 }
 
@@ -2061,7 +2062,7 @@ button,
     padding-bottom: 77px;
   }
 
-  .products__title {
+  .products p {
     margin-bottom: 36px;
   }
 
@@ -2095,8 +2096,7 @@ button,
   }
 
   .products__link--modified br:first-of-type {
-    display: inline-block;
-    vertical-align: auto;
+    display: block;
   }
 
   .products__link--modified br:last-of-type {
@@ -2207,7 +2207,7 @@ button,
     width: 35px;
     height: 35px;
     display: inline-block;
-    vertical-align: auto;
+    vertical-align: middle;
     margin-top: 4px;
   }
 
@@ -2512,14 +2512,14 @@ button,
     padding-bottom: 86px;
   }
 
-  .products__title {
+  .products p {
     font-size: 28px;
     line-height: 38px;
     margin-bottom: 28px;
     display: none;
   }
 
-  .products__title--modified {
+  .products p + p {
     display: block;
   }
 
