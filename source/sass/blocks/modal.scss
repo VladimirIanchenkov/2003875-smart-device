@@ -214,6 +214,7 @@
   opacity: 0.8;
   padding-left: 30px;
   margin-left: 5px;
+  order: 1;
 
   &::before {
     content: "";
@@ -233,10 +234,13 @@
 }
 
 .modal__form-container-inner {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
 .modal__form-container-inner input {
+  order: 1;
   left: 19px;
   bottom: 15%;
 }
