@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Smart Device</title>
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/pt-mono-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-700.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-condensed-400.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="img/main-background-image-desktop@2x.jpg" as="image">
+    <link rel="preload" href="img/main-background-image-tablet@2x.jpg" as="image">
+    <link rel="preload" href="img/main-background-image-mobile@2x.jpg" as="image">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -19,11 +22,12 @@
       <header class="main-header">
         <div class="main-header__container container">
           <a class="main-header__logo main-logo">
-            <svg width="55" height="55" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
-              <use href="./img/sprite_auto.svg#main-logo"></use>
+            <svg class="main-logo-desktop" width="215" height="55" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
+              <use href="./img/sprite_auto.svg#main-logo-desktop"></use>
             </svg>
-            <span class="main-logo__title">Smart Device</span>
-            <span class="main-logo__text">умные технологии</span>
+            <svg class="main-logo-mobile" width="35" height="35" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
+              <use href="./img/sprite_auto.svg#main-logo-mobile"></use>
+            </svg>
           </a>
           <div class="main-header__contacts">
             <a class="main-header__contacts-link" href="mailto:info@sd.ru">
@@ -106,8 +110,8 @@
         <section class="products" id="products">
           <div class="products__container container">
             <h2 class="visually-hidden">Товары и услуги</h2>
-            <p class="products__title">Smart Device предлагает следующие товары и&nbsp;услуги</p>
-            <p class="products__title products__title--modified">Товары и услуги Smart&nbsp;Device</p>
+            <p>Smart Device предлагает следующие товары и&nbsp;услуги</p>
+            <p>Товары и услуги Smart&nbsp;Device</p>
             <ul class="products__list">
               <li class="products__item">
                 <a class="products__link" href="#">
@@ -187,9 +191,9 @@
                 </label>
               </fieldset>
               <div class="contact__form-container-inner">
-                <button class="button">Задать вопрос</button>
                 <input class="visually-hidden" type="checkbox" id="consent" name="сonsent" checked required>
                 <label class="contact__form-label" for="consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+                <button class="button">Задать вопрос</button>
               </div>
             </form>
           </div>
@@ -203,11 +207,9 @@
           <section class="main-footer__social">
             <h2 class="visually-hidden">Мы в соцсетях</h2>
             <a class="main-footer__logo main-logo">
-              <svg width="55" height="55" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
-                <use href="./img/sprite_auto.svg#main-logo"></use>
+              <svg class="main-logo-desktop" width="215" height="55" fill="#00b2ff" role="img" aria-label="Электронные компоненты Smart Device.">
+                <use href="./img/sprite_auto.svg#main-logo-desktop"></use>
               </svg>
-              <span class="main-logo__title">Smart Device</span>
-              <span class="main-logo__text">умные технологии</span>
             </a>
             <ul class="social">
               <li class="social__item">
@@ -331,9 +333,9 @@
               </label>
             </fieldset>
             <div class="modal__form-container-inner">
-              <button class="button">Отправить</button>
               <input class="visually-hidden" type="checkbox" id="modal-consent" name="сonsent" checked required>
               <label class="modal__form-label" for="modal-consent">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              <button class="button">Отправить</button>
             </div>
           </form>
         </div>
