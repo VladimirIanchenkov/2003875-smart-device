@@ -1036,6 +1036,10 @@ button,
   flex-wrap: wrap;
 }
 
+.main-header__logo {
+  pointer-events: none;
+}
+
 .main-header__logo .main-logo-desktop {
   display: block;
 }
@@ -1095,6 +1099,11 @@ button,
   fill: #f2f5f7;
 }
 
+.main-logo:active,
+.main-logo.focus-visible:active {
+  opacity: 0.8;
+}
+
 .main-footer {
   padding-top: 52px;
   padding-bottom: 55px;
@@ -1116,6 +1125,7 @@ button,
   width: fit-content;
   margin-bottom: 22px;
   margin-right: auto;
+  pointer-events: none;
 }
 
 .main-footer__nav {

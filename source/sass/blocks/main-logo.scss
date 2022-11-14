@@ -4,4 +4,8 @@
       fill: $color-alice-blue;
     }
   }
+
+  @include active {
+    opacity: 0.8;
+  }
 }

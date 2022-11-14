@@ -49,6 +49,7 @@
   width: fit-content;
   margin-bottom: 22px;
   margin-right: auto;
+  pointer-events: none;
 
   @include vp-1023 {
     margin: 0;
